@@ -1,0 +1,7 @@
+{
+  "name": "laravel-with-bower",
+  "dependencies": {
+    "jquery": "^3.0.0",
+    "bootstrap": "^3.3.6"
+  }
+}
