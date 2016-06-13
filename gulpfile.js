@@ -16,9 +16,16 @@ elixir(function(mix) {
     //mix.sass('app.scss');
 
     // Compile Less
-  	mix.less('app.less', 'public/css/app.css');
+  	mix.less([
+  		'app.less'
+  	], 'resources/assets/css/custom.css')
+  	.styles([
+  		'auth/login.css',
+  		'welcome.css',
+  		'custom.css',
+  	], 'public/css/app.css');
 
-    // minificando javascripts
+    // Concatenando javascript
     mix.scripts([
 	    '../vendor/jquery/dist/jquery.js',
 	    '../vendor/bootstrap/dist/js/bootstrap.js'
